@@ -1,0 +1,15 @@
+1. download kafka :
+https://www.apache.org/dyn/closer.cgi?path=/kafka/2.6.0/kafka_2.12-2.6.0.tgz
+
+2. download and install winrar to extract it:
+https://www.win-rar.com/predownload.html?spV=true&subD=true&f=winrar-x64-591.exe
+
+open the kafka.gz file with winrar and drop the kafka folder to your C:/
+
+3. install jdk
+
+4. command prompt: cd to kafka folder and execute below command
+bin\windows\kafka-topics.bat
+
+
+
