@@ -7,9 +7,42 @@ https://www.win-rar.com/predownload.html?spV=true&subD=true&f=winrar-x64-591.exe
 open the kafka.gz file with winrar and drop the kafka folder to your C:/
 
 3. install jdk
+setting path:
+https://javatutorial.net/set-java-home-windows-10
 
 4. command prompt: cd to kafka folder and execute below command
 bin\windows\kafka-topics.bat
+
+environment varibale: path->C:\kafka_2.12-2.6.0\bin\windows
+
+5. kafka folder-create new folder data- create 2 new folders-kafka &  zookeeper
+C:\kafka_2.12-2.6.0\data\zookeeper
+
+6. kafka->config->zookeeper.props; correct this property
+dataDir=C:/kafka_2.12-2.6.0/data/zookeeper
+
+7. cmd start zookeeper
+zookeeper-server-start.bat config\zookeeper.properties
+
+8. config folder-server.properties
+log.dirs=/C:/kafka_2.12-2.6.0/data/kafka
+
+8. in second cmd, start kafka server:
+kafka-server-start.bat config\server.properties
+
+9. in third cmd, run kafka commands:
+create topic:
+kafka-topics.bat --bootstrap-server localhost:9092 --topic first_topic --create --partitions 3
+
+check topics list:
+kafka-topics.bat --bootstrap-server localhost:9092 --list
+
+describe topic:
+kafka-topics.bat --bootstrap-server localhost:9092 --topic first_topic --describe
+
+
+
+
 
 
 
